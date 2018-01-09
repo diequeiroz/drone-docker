@@ -97,12 +97,12 @@ func main() {
 			Usage:  "docker daemon Experimental mode",
 			EnvVar: "PLUGIN_EXPERIMENTAL",
 		},
-		cli.BoolFlag{
+		cli.BoolTFlag{
 			Name:   "daemon.debug",
 			Usage:  "docker daemon executes in debug mode",
 			EnvVar: "PLUGIN_DEBUG,DOCKER_LAUNCH_DEBUG",
 		},
-		cli.BoolFlag{
+		cli.BoolTFlag{
 			Name:   "daemon.off",
 			Usage:  "don't start the docker daemon",
 			EnvVar: "PLUGIN_DAEMON_OFF",
