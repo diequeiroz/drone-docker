@@ -192,7 +192,7 @@ func main() {
 			Usage:  "docker email",
 			EnvVar: "PLUGIN_EMAIL,DOCKER_EMAIL",
 		},
-		cli.BoolTFlag{
+		cli.BoolFlag{
 			Name:   "docker.purge",
 			Usage:  "docker should cleanup images",
 			EnvVar: "PLUGIN_PURGE",
@@ -212,7 +212,7 @@ func main() {
 func run(c *cli.Context) error {
 	plugin := docker.Plugin{
 		Dryrun:  c.Bool("dry-run"),
-		Cleanup: c.BoolT("docker.purge"),
+		Cleanup: c.Bool("docker.purge"),
 		Login: docker.Login{
 			Registry: c.String("docker.registry"),
 			Username: c.String("docker.username"),
@@ -239,9 +239,9 @@ func run(c *cli.Context) error {
 			StorageDriver: c.String("daemon.storage-driver"),
 			StoragePath:   c.String("daemon.storage-path"),
 			Insecure:      c.Bool("daemon.insecure"),
-			Disabled:      c.Bool("daemon.off"),
+			Disabled:      c.BoolT("daemon.off"),
 			IPv6:          c.Bool("daemon.ipv6"),
-			Debug:         c.Bool("daemon.debug"),
+			Debug:         c.BoolT("daemon.debug"),
 			Bip:           c.String("daemon.bip"),
 			DNS:           c.StringSlice("daemon.dns"),
 			DNSSearch:     c.StringSlice("daemon.dns-search"),
