@@ -1,0 +1,4 @@
+*
+!cmd/drone-docker-ecr
+!Gopkg.toml
+!vendor
