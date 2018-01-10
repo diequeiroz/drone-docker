@@ -26,6 +26,11 @@ func main() {
 		create = parseBoolOrDefault(false, getenv("PLUGIN_CREATE_REPOSITORY", "ECR_CREATE_REPOSITORY"))
 	)
 
+	// override plugins/docker default settings
+	os.Setenv("PLUGIN_PURGE", "false")
+	os.Setenv("PLUGIN_DAEMON_OFF", "true")
+	os.Setenv("PLUGIN_DEBUG", "true")
+
 	// set the region
 	if region == "" {
 		region = defaultRegion
