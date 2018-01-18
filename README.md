@@ -3,7 +3,6 @@
 This is an opinionated update on [drone-plugins/drone-docker](https://github.com/drone-plugins/drone-docker) ecr plugin, which does the following:
 
 * use the *host* daemon by default, instead of docker-in-docker (PLUGIN_DAEMON_OFF = true)
-* turns off image cleanup, to avoid conflicts in parallel builds (PLUGIN_PURGE = false)
 * activate debug logs (PLUGIN_DEBUG = true)
 
 For more information please see the [original documentation](http://plugins.drone.io/drone-plugins/drone-ecr/).
