@@ -29,6 +29,7 @@ func main() {
 	// override plugins/docker default settings
 	os.Setenv("PLUGIN_DAEMON_OFF", "true")
 	os.Setenv("PLUGIN_DEBUG", "true")
+    os.Setenv("PLUGIN_PURGE", "false")
 
 	// set the region
 	if region == "" {
