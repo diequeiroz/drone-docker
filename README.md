@@ -1,5 +1,9 @@
 # drone-docker
 
+![image](https://user-images.githubusercontent.com/11199127/106956189-04f3e900-6715-11eb-99fd-31d724094739.png)
+
+:information_source: Fernandrone is gone. 
+
 This is an opinionated update on [drone-plugins/drone-docker](https://github.com/drone-plugins/drone-docker) ecr plugin, which does the following:
 
 * use the *host* daemon by default, instead of docker-in-docker (PLUGIN_DAEMON_OFF = true)
